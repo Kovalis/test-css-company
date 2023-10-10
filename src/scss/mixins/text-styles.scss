@@ -1,0 +1,48 @@
+@import "fluid";
+
+@mixin body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+@mixin button-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1429;
+}
+
+@mixin footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1429;
+}
+
+@mixin nav-link {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@mixin fluid-text {
+  font-size: fluid(24, 32, 320, 768);
+
+  @media screen and (min-width: $screen-ti) {
+    font-size: fluid(32, 48, 768, 1280);
+  }
+}
+
+@mixin input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+@mixin field {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1429;
+}

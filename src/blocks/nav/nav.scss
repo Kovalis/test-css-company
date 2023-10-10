@@ -1,0 +1,40 @@
+@import "../../scss/mixins/list-reset";
+@import "../../scss/mixins/text-styles";
+
+.nav {
+  height: 100%;
+  display: none;
+  align-items: center;
+  gap: 60px;
+
+  &--active {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    right: 0;
+    z-index: 99;
+    height: auto;
+    padding: 30px 16px;
+    background-color: var(--bg-header);
+    border-top: 1px solid var(--color-white);
+  }
+
+  @media screen and (min-width: $screen-ti) {
+    display: flex;
+  }
+
+  &__item {
+    @include nav-link;
+
+    color: var(--color-white);
+    transition: 0.3s color;
+
+    &:hover,
+    &--active {
+      color: var(--color-nav);
+    }
+  }
+}

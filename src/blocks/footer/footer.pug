@@ -1,0 +1,42 @@
+//- Все примеси в этом файле должны начинаться c имени блока (footer)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт в сборку
+
+mixin footer(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +footer('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' footer--' + modsList[i].trim();
+      }
+    }
+
+  footer.footer(class= allMods)&attributes(attributes)
+    .container
+      .footer__inner
+        .footer__inner-item.footer__copy © 2018 «LOREMIPSUM.NET» Все права защищены.
+        .footer__inner-item.footer__links
+          a.footer__link(href="#", target="_blank")
+            img.footer__link-icon(src="./img/qiwi.svg", alt="")
+            | Qiwi wallet
+          a.footer__link(href="#", target="_blank")
+            img.footer__link-icon(src="./img/ya-money.svg", alt="")
+            | Yandex Money
+          a.footer__link(href="#", target="_blank")
+            img.footer__link-icon(src="./img/web-money.svg", alt="")
+            | Web Money
+
+        .footer__inner-item.footer__links
+          a.footer__link(href="mailto:info@ipsum228.com")
+            img.footer__link-icon(src="./img/email.svg", alt="")
+            | info@ipsum228.com
+          a.footer__link(href="https://vk.com/", target="_blank")
+            img.footer__link-icon(src="./img/vk.svg", alt="")
+            | Мы вконтакте

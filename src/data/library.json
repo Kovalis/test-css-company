@@ -1,0 +1,21 @@
+{
+  "section": [
+    {
+      "title": "Бизнес",
+      "href": "start"
+    },
+    {
+      "title": "О нас",
+      "href": "library"
+    },
+    {
+      "title": "Цены",
+      "href": "tools"
+    },
+    {
+      "title": "Оформить заказ",
+      "href": "tools2"
+    }
+  ],
+  "data": "String from json"
+}

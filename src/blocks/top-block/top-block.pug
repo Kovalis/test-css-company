@@ -1,0 +1,32 @@
+//- Все примеси в этом файле должны начинаться c имени блока (top-block)
+//- Упоминание имени блока в классах обязательно, без этого он не попадёт в сборку
+
+mixin top-block
+
+  //- Вызов:
+        +top-block
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' top-block--' + modsList[i].trim();
+      }
+    }
+
+  section.top-block(class=allMods)&attributes(attributes)
+    .container
+        h1.top-block__title
+            span.blue-color Lorem ipsum&nbsp;
+            | dolor sit ametconsectetur&nbsp;
+            span.blue-color adipiscing
+        .top-block__title-list At vero eos et accusamus et iusto odio dignissimos ducimus!
+        ul.top-block__list
+            li.top-block__list-item Totam rem aperiam eaque ipsa
+            li.top-block__list-item Sit voluptatem accusantium doloremque laudantium
+            li.top-block__list-item Sed ut perspiciatis, unde omnis iste natus error
+        .top-block__btns
+          button.main-btn заказать
+          button.main-btn.main-btn--reverse подробнее

@@ -1,0 +1,73 @@
+.top-block {
+    padding: 103px 0 30px;
+    background: url("../{{img}}/top-block-bg__mobile.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 500px;
+
+    @media screen and (min-width: $screen-ti) {
+        padding-top: 203px;
+        min-height: 850px;
+        background-image: url("../{{img}}/top-block-bg.jpg");
+    }
+
+    &__title {
+        margin-top: 0;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $screen-ti) {
+            margin-bottom: 91px;
+            font-size: 48px;
+        }
+    }
+
+    &__title-list {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__list {
+        margin: 0;
+        margin-bottom: 30px;
+        padding: 0;
+        list-style: none;
+
+        @media screen and (min-width: $screen-ti) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+        padding-left: 25px;
+        font-size: 20px;
+        margin-bottom: 5px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 25px;
+            height: 22px;
+            background: url("../{{img}}/list-item.svg") no-repeat center;
+            background-size: 24px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        @media screen and (min-width: $screen-ti) {
+            flex-direction: row;
+            gap: 30px;
+        }
+    }
+}

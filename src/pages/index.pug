@@ -1,0 +1,41 @@
+extends ../templates/layout_default.pug
+
+block variables
+  - isMainPage = false
+  - pageTitle = 'Стартовая страница'
+  - metaDescription = 'description'
+  - metaKeywords = 'keywords'
+
+block content
+  +top-block
+  +order-block
+  .container
+            //- +library-item(library.section[1].list[1], 'row')
+              .library__inputs-list
+                +input('Введите текст', '', 'input-text-1', 'input-text-1')
+                +input('Введите текст', '', 'input-text-2', 'input-text-2', 'Д’Артаньян')
+                +input('Введите текст', '', 'input-text-2', 'input-text-2d', 'Д’Артаньян')(disabled)
+                +input-email('Введите почту', '', 'input-mail', 'input-mail', value)
+                +input-phone('Введите телефон', '', 'input-phone', 'input-phone', value)
+                +input-search('Поиск', '', 'input-search', 'input-search', value)
+                +input-password('Введите пароль', '', 'input-password', 'input-password', 'batman')
+                +input-number('0', '', 'input-number', 'number-id', 5, 10)
+                +input-file('some-mod', 'file-input', 'file-edu')
+                +input-file('some-mod', 'file-input-2', 'file-edu-2')(disabled)
+            //- +library-item(library.section[1].list[3], 'row')
+              .library__inputs-list
+                +select(['Выберите опцию', 'Один', 'Два'], '', 'select-name', 'select-id')
+                +select(['Выберите опцию', 'Один', 'Два'], '', 'select-name-2', 'select-id-2')(disabled)
+            //- +library-item(library.section[1].list[6], 'row')
+            //-   .library__inputs-list
+            //-     +field('text', 'Имя', 'Введите имя', '', 'field-id', 'field-name', 'Д’Артаньян')(required)
+            //- +library-item(library.section[1].list[7], 'row')
+            //-   .library__inputs-list
+            //-     +field-dp('text', 'Имя', '', 'field-dp-id', 'field-dp-name', '')(required)
+            //- +library-item(library.section[1].list[8], 'row')
+            //-   form.form
+            //-     .form__body
+            //-       +field('text', 'Имя', 'Введите имя', '', 'name-field', 'name-field', 'Д’Артаньян')(required)
+            //-       +field('email', 'Электропочта', 'Введите почту', '', 'mail-field', 'mail-field', 'gaskonets@musketeer.fr')(required)
+            //-     .form__footer
+            //-       +button('submit', 'Отправить', 'primary', 'button-name-5', 'exp-button-5')(class='form__js-submit')
