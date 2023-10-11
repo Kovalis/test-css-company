@@ -91,6 +91,7 @@
   "dependencies": {
     "autosize": "^5.0.2",
     "imask": "^6.4.3",
+    "nouislider": "^15.7.1",
     "sanitize.css": "^13.0.0"
   },
   "husky": {

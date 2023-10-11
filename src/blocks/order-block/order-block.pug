@@ -42,15 +42,31 @@ mixin order-block
                 .order-block__steps-item-img
                     img.order-block__steps-item-icon(src="./img/step5.svg", alt="", width="100px", height="100px")
                 .order-block__steps-item-text Excepteur sint occaecat cupidatat non proident
-        form.form
+        form
             .order-block__greed-form
                 .order-block__greed-form-item
-                    +select(['Выберите тип системы', 'Один', 'Два'], '', 'select-name', 'select-id')
+                    .select-wrap
+                        label
+                            select.select(name="type-system")
+                                option(value="type") Выберите тип системы
+                                option(value="type2") Sed ut perspiciatis
+                                option(value="type3") Nemo enim ipsam
+                                option(value="type4") Et harum quidem
+                                option(value="type5") Temporibus autem
+                                option(value="type6") Itaque earum rerum
                 .order-block__greed-form-item
                     +field('email', _, 'Ваш e-mail', '', 'mail-field', 'mail-field')(required)
                 .order-block__greed-form-item
                     +field('text', _, 'Ваше имя', '', 'field-id', 'field-name')(required)
                 .order-block__greed-form-item.order-block__greed-form-item--col-2
+                    .order-block__range
+                        .range__text Sed ut perspiciatis, unde omnis iste natus
+                        .range__value
+                            span.js-range__value
+                            | %
+                    .range
+                        .range__inner
+                    input.js-range__value-input(type="hidden", name="range-order")
                 .order-block__greed-form-item
                     label.form-file
                         img(src="./img/file-icon.svg", alt="", width="17px", height="20px")
@@ -58,5 +74,5 @@ mixin order-block
                         input(type="file")
                 .order-block__greed-form-item
                 .order-block__greed-form-item
-                    button.main-btn.main-btn--wide Отправить
+                    button.order-block__btn.main-btn.main-btn--wide Отправить
                 .order-block__greed-form-item

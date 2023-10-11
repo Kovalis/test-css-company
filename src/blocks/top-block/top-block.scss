@@ -19,6 +19,7 @@
         margin-bottom: 30px;
 
         @media screen and (min-width: $screen-ti) {
+            max-width: 780px;
             margin-bottom: 91px;
             font-size: 48px;
         }

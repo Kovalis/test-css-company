@@ -1,0 +1,55 @@
+@import "nouislider/dist/nouislider.css";
+
+.range {
+    height: 30px;
+    background: transparent;
+    border: none;
+    padding: 12px 0;
+    box-shadow: none;
+
+    &__inner {
+        height: 6px;
+        padding: 0 8px;
+        background-color: rgba(255, 255, 255, 0.70);
+        border: none;
+        border-radius: 3px;
+        box-shadow: none;
+    }
+
+    & .noUi-connects {
+        background: none;
+        border: none;
+    }
+
+    & .noUi-connect {
+        background-color: rgba(255, 255, 255, 0.70);
+        height: 4px;
+    }
+
+    & .noUi-handle {
+        top: -18.5px;
+        right: -18.5px;
+        width: 37px;
+        height: 37px;
+        background: url("../{{img}}/range-icon.svg") no-repeat center;
+        background-size: 100%;
+        border: none;
+        box-shadow: none;
+        transition: 0.3s all;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        &:hover {
+            background-color: var(--color-btn-hover);
+            border: 1px solid var(--color-btn-hover);
+        }
+    }
+
+    & .noUi-base {
+        transform: translateY(-4px);
+    }
+}
